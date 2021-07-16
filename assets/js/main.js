@@ -6,8 +6,8 @@ let level = 0 ;
 var correctTrack = document.querySelector('#correct');
 var scoreHTML = document.querySelector('#score');
 var background = document.querySelector('#background');
-var win = document.querySelector('#win');
-var lose = document.querySelector('#lose');
+var winMusic = document.querySelector('#win');
+var loseMusic = document.querySelector('#lose');
 
 // Play-btn
 $('.play-btn').on('click',function(){
@@ -71,7 +71,7 @@ function ticTic()
 function finishGame(win = true)
 {
     background.pause()
-    win ? win.play() : lose.play()
+    win ? winMusic.play() : loseMusic.play()
     $('.play-page').fadeOut(500);
     win ? $('.win-popup').fadeIn(500) :$('.lose-popup').fadeIn(500)
     setTimeout(function (){
