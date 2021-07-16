@@ -25,7 +25,6 @@ function startSound(audio,loopOption = false){
 // Score Count
 var score = 0;
 
-
 function scorePass(item_id) {
     level ++
     score = score + 200;
@@ -71,3 +70,7 @@ function finishGame(win = true)
         window.location.reload()
     },3000)
 }
+
+$(window).on('load',function(){
+    $('#loader-wrapper').hide();
+});
