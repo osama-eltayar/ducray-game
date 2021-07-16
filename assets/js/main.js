@@ -8,7 +8,8 @@ var scoreHTML = document.querySelector('#score');
 var background = document.querySelector('#background');
 var winMusic = document.querySelector('#win');
 var loseMusic = document.querySelector('#lose');
-
+var startMusic = document.querySelector('#start');
+ // startSound(startMusic,true)
 // Play-btn
 $('.play-btn').on('click',function(){
     ticTic()
@@ -18,6 +19,7 @@ $('.play-btn').on('click',function(){
     $('.play-page').fadeIn(500);
     $('.start-page').fadeOut(500);
     // background.play();
+    // startMusic.pause()
     startSound(background,true)
 });
 
