@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/faveicon.png"/>
+    <!-- custom animation -->
+    <link rel="stylesheet" href="assets/css/customAnimation.css">
+    <link rel="stylesheet" href="assets/css/landscape.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+
+    <title>Ducray Game</title>
+</head>
+
+<body>
+
+    <!-- start  Game -->
+    <section class="section start-page">
+        <div class="content">
+            <div class="logo-top">
+                <img src="assets/images/logo.svg" alt="" class="img-fluid">
+            </div>
+            <div class="img-box">
+                <img src="assets/images/ducray-center.svg" alt="ducray-center" class="ducray-center">
+                <button class="play-btn">
+                    <img src="assets/images/play-btn.svg" alt="play-btn" class="img-fluid">
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- play game -->
+    <section class="section play-page">
+        <div class="content">
+
+            <!-- ************* -->
+            <div class="head-part head-part-left">
+                <div class="data-section"> <img src="assets/images/coins.png" alt="">
+                    <p class="me-0 ms-0" id="score">0</p>
+                </div>
+            </div>
+            <div class="head-part head-part-right">
+                <div class="data-section"> <img src="assets/images/time.png" alt="">
+                    <p class="me-0 ms-0" id="countdown">00:00</p>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <ul class="hidden-items">
+                    <li class="h-item img-icon1 back-item"><img src="assets/images/icon-1.png" alt=""></li>
+                    <li class="h-item img-icon2 back-item"><img src="assets/images/icon-2.png" alt=""></li>
+                    <li class="h-item img-icon3 back-item"><img src="assets/images/icon-3.png" alt=""></li>
+                    <li class="h-item img-icon4 back-item"><img src="assets/images/icon-4.png" alt=""></li>
+                    <li class="h-item img-icon5 back-item"><img src="assets/images/icon-5.png" alt=""></li>
+                    <li class="h-item img-icon6 back-item"><img src="assets/images/icon-6.png" alt=""></li>
+                </ul>
+                <ul class="buttons-list">
+                    <li id="icon1" onclick="scorePass(this.id)"></li>
+                    <li id="icon2" onclick="scorePass(this.id)"></li>
+                    <li id="icon3" onclick="scorePass(this.id)"></li>
+                    <li id="icon4" onclick="scorePass(this.id)"></li>
+                    <li id="icon5" onclick="scorePass(this.id)"></li>
+                    <li id="icon6" onclick="scorePass(this.id)"></li>
+                </ul>
+                <img class="game-image" src="assets/images/main-image.png" alt="">
+            </div>
+            <div id="listItems">
+                <div class="list-items">
+                    <img src="assets/images/bar.png" alt="" class="bar">
+                    <div class="box-items">
+                        <span class="icon1">
+                            <img src="assets/images/icon-1.png" alt="">
+                        </span>
+                        <span class="icon2">
+                            <img src="assets/images/icon-2.png" alt="">
+                        </span>
+                        <span class="icon3">
+                            <img src="assets/images/icon-3.png" alt="">
+                        </span>
+                        <span class="icon4">
+                            <img src="assets/images/icon-4.png" alt="">
+                        </span>
+                        <span class="icon5">
+                            <img src="assets/images/icon-5.png" alt="">
+                        </span>
+                        <span class="icon6">
+                            <img src="assets/images/icon-6.png" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- lose popup -->
+    <section class="section lose-popup">
+        <div class="content">
+            <img class="lose-img" src="assets/images/lose-img.png" alt="">
+        </div>
+    </section>
+
+    <!-- win popup -->
+    <section class="section win-popup">
+        <div class="content">
+            <img class="win-img" src="assets/images/win-img.png" alt="">
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Question Popup -->
+    <!-- <div class="question-popup">
+        <div class="content">
+            <div class="question-box">
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- landscape-mode -->
+    <div class="landscape-mode">
+        <div class="landscape-content">
+            Please use landscape mode.
+        </div>
+    </div>
+
+
+
+
+    <!-- audios -->
+    <audio id="background">
+        <source src="assets/audios/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correct">
+        <source src="assets/audios/correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong">
+        <source src="assets/audios/wrong.wav" type="audio/mpeg">
+    </audio>
+
+
+    <!-- jQuery library -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- main script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
