@@ -1,6 +1,12 @@
 let duration = 60 ;
 let questionInterval ;
 let level = 0 ;
+
+//Audio Player
+var correctTrack = document.querySelector('#correct');
+var scoreHTML = document.querySelector('#score');
+var background = document.querySelector('#background');
+
 // Play-btn
 $('.play-btn').on('click',function(){
     ticTic()
@@ -9,13 +15,11 @@ $('.play-btn').on('click',function(){
     }, 1000);
     $('.play-page').fadeIn(500);
     $('.start-page').fadeOut(500);
-
+    background.play();
 });
 
 
-//Audio Player
-var correctTrack = document.querySelector('#correct');
-var scoreHTML = document.querySelector('#score');
+
 // start sound
 function startSound(audio,loopOption = false){
     audio.play();
@@ -64,6 +68,7 @@ function ticTic()
 
 function finishGame(win = true)
 {
+    background.pause()
     $('.play-page').fadeOut(500);
     win ? $('.win-popup').fadeIn(500) :$('.lose-popup').fadeIn(500)
     setTimeout(function (){
