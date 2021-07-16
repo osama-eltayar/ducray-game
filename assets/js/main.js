@@ -17,7 +17,8 @@ $('.play-btn').on('click',function(){
     }, 1000);
     $('.play-page').fadeIn(500);
     $('.start-page').fadeOut(500);
-    background.play();
+    // background.play();
+    startSound(background,true)
 });
 
 
