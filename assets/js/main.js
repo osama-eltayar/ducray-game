@@ -8,8 +8,7 @@ var scoreHTML = document.querySelector('#score');
 var background = document.querySelector('#background');
 var winMusic = document.querySelector('#win');
 var loseMusic = document.querySelector('#lose');
-var startMusic = document.querySelector('#start');
- // startSound(startMusic,true)
+
 // Play-btn
 $('.play-btn').on('click',function(){
     ticTic()
@@ -51,6 +50,7 @@ function scorePass(item_id) {
 
     if (level == 6)
     {
+        background.pause()
         clearInterval(questionInterval)
         setTimeout(finishGame,1500)
     }
@@ -62,6 +62,7 @@ function ticTic()
     duration-- ;
     if (duration == 0)
     {
+        background.pause()
         clearInterval(questionInterval)
         finishGame(false)
         return ;
@@ -73,13 +74,15 @@ function ticTic()
 
 function finishGame(win = true)
 {
-    background.pause()
-    win ? winMusic.play() : loseMusic.play()
+
+    setTimeout(function (){
+        win ? winMusic.play() : loseMusic.play()
+    },1000)
     $('.play-page').fadeOut(500);
     win ? $('.win-popup').fadeIn(500) :$('.lose-popup').fadeIn(500)
     setTimeout(function (){
         window.location.reload()
-    },3000)
+    },5000)
 }
 
 $(window).on('load',function(){
