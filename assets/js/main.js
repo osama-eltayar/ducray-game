@@ -74,7 +74,7 @@ function ticTic()
 
 function finishGame(win = true)
 {
-
+    correctTrack.pause();
     setTimeout(function (){
         win ? winMusic.play() : loseMusic.play()
     },1000)
